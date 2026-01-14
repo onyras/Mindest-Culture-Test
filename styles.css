@@ -320,13 +320,13 @@ h4 { font-size: clamp(1.125rem, 2.5vw, 1.375rem); }
     font-family: var(--nk-font-serif);
     font-size: 1.5rem;
     font-weight: 400;
-    color: var(--nk-blue);
+    color: var(--growth-color);
     line-height: 1.2;
 }
 
 .metric-label {
     font-size: 0.6875rem;
-    color: var(--nk-blue);
+    color: var(--growth-color);
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
@@ -403,7 +403,7 @@ h4 { font-size: clamp(1.125rem, 2.5vw, 1.375rem); }
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--fixed-color), var(--growth-color));
+    background: linear-gradient(90deg, var(--nk-blue), var(--nk-green));
     border-radius: 2px;
     transition: width var(--nk-transition-medium);
 }
@@ -600,14 +600,14 @@ h4 { font-size: clamp(1.125rem, 2.5vw, 1.375rem); }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(166, 190, 164, 0.2), rgba(127, 171, 200, 0.2));
+    background: rgba(127, 171, 200, 0.15);
     border-radius: 50%;
 }
 
 .teaser-icon svg {
     width: 32px;
     height: 32px;
-    stroke: var(--nk-green);
+    stroke: var(--nk-blue);
 }
 
 .email-content h2 {
@@ -899,7 +899,7 @@ h4 { font-size: clamp(1.125rem, 2.5vw, 1.375rem); }
 
 .meter-track {
     height: 12px;
-    background: linear-gradient(90deg, var(--fixed-color), var(--mixed-color) 50%, var(--growth-color));
+    background: linear-gradient(90deg, var(--nk-blue), var(--nk-green));
     border-radius: 6px;
     position: relative;
     overflow: visible;
@@ -945,7 +945,7 @@ h4 { font-size: clamp(1.125rem, 2.5vw, 1.375rem); }
 
 /* Score Interpretation */
 .score-interpretation {
-    background: linear-gradient(135deg, rgba(166, 190, 164, 0.1), rgba(127, 171, 200, 0.1));
+    background: rgba(0, 0, 0, 0.02);
     border-radius: 16px;
     padding: 1.5rem 2rem;
     max-width: 560px;
@@ -1056,14 +1056,14 @@ h4 { font-size: clamp(1.125rem, 2.5vw, 1.375rem); }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(198, 165, 91, 0.15), rgba(127, 171, 200, 0.15));
+    background: rgba(198, 165, 91, 0.12);
     border-radius: 12px;
 }
 
 .key-insights .section-icon svg {
     width: 24px;
     height: 24px;
-    stroke: var(--mixed-color);
+    stroke: var(--nk-yellow);
 }
 
 .insight-item {
@@ -1100,14 +1100,14 @@ h4 { font-size: clamp(1.125rem, 2.5vw, 1.375rem); }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(166, 190, 164, 0.2), rgba(166, 190, 164, 0.1));
+    background: rgba(127, 171, 200, 0.12);
     border-radius: 12px;
 }
 
 .growth-actions .section-icon svg {
     width: 24px;
     height: 24px;
-    stroke: var(--growth-color);
+    stroke: var(--nk-blue);
 }
 
 .actions-list {
@@ -1145,22 +1145,22 @@ h4 { font-size: clamp(1.125rem, 2.5vw, 1.375rem); }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(166, 190, 164, 0.15), rgba(127, 171, 200, 0.15));
+    background: rgba(127, 171, 200, 0.12);
     border-radius: 12px;
 }
 
 .section-icon svg {
     width: 24px;
     height: 24px;
-    stroke: var(--nk-green);
+    stroke: var(--nk-blue);
 }
 
 .section-icon.action-icon {
-    background: linear-gradient(135deg, rgba(166, 190, 164, 0.2), rgba(166, 190, 164, 0.1));
+    background: rgba(127, 171, 200, 0.12);
 }
 
 .section-icon.action-icon svg {
-    stroke: var(--growth-color);
+    stroke: var(--nk-blue);
 }
 
 /* Reflection Questions */
@@ -1182,14 +1182,14 @@ h4 { font-size: clamp(1.125rem, 2.5vw, 1.375rem); }
 }
 
 .reflection-list li::marker {
-    color: var(--nk-green);
+    color: var(--nk-blue);
     font-weight: 600;
 }
 
 /* CTA Section */
 .cta-section {
     text-align: center;
-    background: linear-gradient(135deg, rgba(166, 190, 164, 0.1), rgba(127, 171, 200, 0.1));
+    background: rgba(127, 171, 200, 0.08);
     border: none;
     padding: 2.5rem 2rem;
 }
