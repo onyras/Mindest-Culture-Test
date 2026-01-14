@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindset Culture Test | Nikolas Konstantin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Intro Screen -->
+    <section id="intro" class="screen active">
+        <div class="container intro-centered">
+            <!-- Mindset Visual -->
+            <div class="intro-visual">
+                <div class="mindset-icons-preview">
+                    <div class="mindset-icon-preview fixed">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <div class="mindset-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </div>
+                    <div class="mindset-icon-preview growth">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Title -->
+            <h1>Mindset Culture Test</h1>
+            <p class="tagline">Is your company culture fostering growth or holding people back?</p>
+
+            <!-- Body Text -->
+            <div class="intro-body">
+                <p>Carol Dweck's research on mindset has transformed how we think about learning, talent, and organizational culture. But knowing the theory isn't enough - you need to see how it's playing out in your organization.</p>
+
+                <p class="core-question">Does your company truly embrace a growth mindset - or just talk about it?</p>
+
+                <p>This assessment measures how your organization's culture handles failure, feedback, talent development, and innovation. You'll discover where your culture sits on the mindset spectrum and get actionable insights for building a more growth-oriented environment.</p>
+            </div>
+
+            <!-- The 2 Mindsets -->
+            <div class="mindsets-preview">
+                <div class="mindset-pill fixed">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+                    <span>Fixed Mindset</span>
+                </div>
+                <div class="mindset-pill growth">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                    <span>Growth Mindset</span>
+                </div>
+            </div>
+
+            <!-- Metrics -->
+            <div class="intro-metrics">
+                <div class="metric-item">
+                    <span class="metric-number">12</span>
+                    <span class="metric-label">Questions</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-number">4</span>
+                    <span class="metric-label">Dimensions</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-number">3</span>
+                    <span class="metric-label">Minutes</span>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="intro-cta">
+                <button class="btn btn-primary" onclick="startQuiz()">Assess My Culture</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Screen -->
+    <section id="quiz" class="screen">
+        <div class="quiz-header">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text">
+                    <span id="currentDimension">Dimension 1</span> of 4
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="quiz-content">
+                <div class="category-header">
+                    <div class="dimension-icon-large" id="dimensionIcon"></div>
+                    <h2 id="dimensionTitle">Loading...</h2>
+                    <p id="dimensionDescription" class="category-description">Loading...</p>
+                </div>
+
+                <div class="questions-container" id="questionsContainer">
+                    <!-- Questions will be injected here -->
+                </div>
+
+                <div class="quiz-navigation">
+                    <button class="btn btn-secondary" id="prevBtn" onclick="previousSection()" style="display: none;">Previous</button>
+                    <button class="btn btn-primary" id="nextBtn" onclick="nextSection()">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="rating-legend">
+            <span>1 = Strongly Disagree</span>
+            <span>5 = Strongly Agree</span>
+        </div>
+    </section>
+
+    <!-- Email Capture Screen -->
+    <section id="email-capture" class="screen">
+        <div class="container">
+            <div class="email-content">
+                <div class="results-teaser">
+                    <div class="teaser-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h2>Assessment Complete!</h2>
+                    <p class="teaser-subtitle">Your culture mindset report is ready.</p>
+
+                    <div class="teaser-preview">
+                        <div class="teaser-item">
+                            <span class="teaser-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </span>
+                            <span>Your overall mindset culture score</span>
+                        </div>
+                        <div class="teaser-item">
+                            <span class="teaser-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </span>
+                            <span>Breakdown across 4 key dimensions</span>
+                        </div>
+                        <div class="teaser-item">
+                            <span class="teaser-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </span>
+                            <span>What your score means for your organization</span>
+                        </div>
+                        <div class="teaser-item">
+                            <span class="teaser-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </span>
+                            <span>Practical next steps to shift your culture</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="newsletter-signup">
+                    <p class="signup-prompt">Subscribe to see your results:</p>
+                    <form id="emailForm" onsubmit="submitEmail(event)">
+                        <div class="inline-form">
+                            <input type="email" id="email" name="email" required placeholder="Your email address">
+                            <button type="submit" class="btn btn-inline" id="submitBtn">
+                                <span class="btn-text">See My Results</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <svg class="spinner" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="30 70"/>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                        <label class="subscribe-checkbox">
+                            <input type="checkbox" id="subscribeCheck" required>
+                            <span class="checkbox-custom"></span>
+                            <span>I agree to subscribe to <a href="https://themindfulceo.beehiiv.com" target="_blank"><em>The Mindful CEO</em></a> newsletter</span>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Screen -->
+    <section id="results" class="screen">
+        <div class="container">
+            <div class="results-content">
+                <!-- Overall Score Hero -->
+                <div class="results-hero">
+                    <h2>Your Mindset Culture Score</h2>
+                    <div class="score-meter">
+                        <div class="meter-labels">
+                            <span class="meter-label fixed">Fixed</span>
+                            <span class="meter-label mixed">Mixed</span>
+                            <span class="meter-label growth">Growth</span>
+                        </div>
+                        <div class="meter-track">
+                            <div class="meter-fill" id="meterFill"></div>
+                            <div class="meter-marker" id="meterMarker"></div>
+                        </div>
+                        <div class="meter-score">
+                            <span class="score-value" id="overallScore">0</span>
+                            <span class="score-max">/ 60</span>
+                        </div>
+                    </div>
+                    <div class="score-interpretation" id="scoreInterpretation">
+                        <h3 id="interpretationTitle">Loading...</h3>
+                        <p id="interpretationText">Loading...</p>
+                    </div>
+                </div>
+
+                <!-- Dimension Breakdown -->
+                <div class="results-section dimension-breakdown">
+                    <h3>Dimension Breakdown</h3>
+                    <div class="dimension-bars" id="dimensionBars">
+                        <!-- Dimension bars will be injected here -->
+                    </div>
+                </div>
+
+                <!-- Key Insights -->
+                <div class="results-section key-insights">
+                    <div class="section-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3>Key Insights</h3>
+                    <div id="keyInsights">
+                        <!-- Insights will be injected here -->
+                    </div>
+                </div>
+
+                <!-- Growth Actions -->
+                <div class="results-section growth-actions">
+                    <div class="section-icon action-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3>Actions to Shift Toward Growth</h3>
+                    <ul class="actions-list" id="actionsList">
+                        <!-- Actions will be injected here -->
+                    </ul>
+                </div>
+
+                <!-- Reflection Questions -->
+                <div class="results-section reflection">
+                    <h3>Questions to Explore</h3>
+                    <ol class="reflection-list" id="reflectionList">
+                        <!-- Reflection questions will be injected here -->
+                    </ol>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="results-section cta-section">
+                    <h3>Ready to Transform Your Culture?</h3>
+                    <p>Understanding your current mindset culture is just the beginning. Real transformation requires intentional leadership, consistent action, and often, an outside perspective to see blind spots.</p>
+                    <a href="https://calendly.com/nikolaskonstantin/1-on-1-conversation" target="_blank" class="btn btn-primary">Book a Conversation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
