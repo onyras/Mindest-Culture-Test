@@ -1,188 +1,193 @@
-// Mindset Culture Test Data based on Carol Dweck's research
+// Mindset Culture Test
+// Based on Mary Murphy's research on organizational mindset cultures
+// (Murphy is Carol Dweck's protégé and author of "Cultures of Growth")
 const quizData = {
     dimensions: [
         {
-            id: 'failure-response',
-            title: 'Response to Failure',
-            description: 'How your organization handles mistakes, setbacks, and learning from failure',
+            id: 'evaluative-situations',
+            title: 'Evaluative Situations',
+            description: 'How your organization approaches performance reviews, assessments, and judgment',
             color: 'var(--nk-blue)',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
             </svg>`,
             questions: [
                 {
-                    text: "When someone makes a mistake, the focus is on learning rather than blame.",
-                    growthIndicator: true
+                    text: "Performance reviews focus primarily on identifying who the top performers are.",
+                    growthIndicator: false
                 },
                 {
-                    text: "Failed projects are treated as valuable learning opportunities that are openly discussed.",
-                    growthIndicator: true
+                    text: "When evaluating candidates, we prioritize impressive credentials and past achievements over potential.",
+                    growthIndicator: false
                 },
                 {
-                    text: "People feel safe admitting when they don't know something or need help.",
-                    growthIndicator: true
+                    text: "In meetings, the most valued contributions come from those already recognized as experts.",
+                    growthIndicator: false
                 }
             ]
         },
         {
-            id: 'feedback-culture',
-            title: 'Feedback & Development',
-            description: 'How feedback is given, received, and used for growth across the organization',
+            id: 'high-effort',
+            title: 'High-Effort Situations',
+            description: 'What happens when tasks require significant effort, struggle, or persistence',
             color: 'var(--nk-green)',
+            icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>`,
+            questions: [
+                {
+                    text: "When someone struggles with a task, it raises questions about whether they're right for the role.",
+                    growthIndicator: false
+                },
+                {
+                    text: "The best performers make their work look effortless.",
+                    growthIndicator: false
+                },
+                {
+                    text: "Taking a long time to master something suggests it might not be your strength.",
+                    growthIndicator: false
+                }
+            ]
+        },
+        {
+            id: 'critical-feedback',
+            title: 'Critical Feedback',
+            description: 'How the organization handles criticism, mistakes, and setbacks',
+            color: 'var(--nk-yellow)',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
             </svg>`,
             questions: [
                 {
-                    text: "Feedback is given regularly and constructively, not just during annual reviews.",
-                    growthIndicator: true
+                    text: "Receiving critical feedback feels like a judgment of your capabilities.",
+                    growthIndicator: false
                 },
                 {
-                    text: "Leaders actively seek feedback from their teams and act on it visibly.",
-                    growthIndicator: true
+                    text: "Making a visible mistake can significantly impact how others perceive your competence.",
+                    growthIndicator: false
                 },
                 {
-                    text: "Development conversations focus on potential and growth, not just current performance.",
-                    growthIndicator: true
+                    text: "People are careful about what they share in case it reflects poorly on them.",
+                    growthIndicator: false
                 }
             ]
         },
         {
-            id: 'talent-beliefs',
-            title: 'Talent & Potential',
-            description: 'Beliefs about whether abilities are fixed or can be developed over time',
-            color: 'var(--nk-yellow)',
-            icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>`,
-            questions: [
-                {
-                    text: "We believe most skills can be developed with effort, good strategies, and coaching.",
-                    growthIndicator: true
-                },
-                {
-                    text: "Hiring and promotions consider potential and learning ability, not just proven track record.",
-                    growthIndicator: true
-                },
-                {
-                    text: "People are encouraged to take on stretch assignments outside their comfort zone.",
-                    growthIndicator: true
-                }
-            ]
-        },
-        {
-            id: 'innovation-risk',
-            title: 'Innovation & Risk',
-            description: 'How the organization approaches new ideas, experimentation, and calculated risks',
+            id: 'success-of-others',
+            title: 'Success of Others',
+            description: 'How people respond when colleagues achieve success or recognition',
             color: 'var(--nk-lilac)',
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
             </svg>`,
             questions: [
                 {
-                    text: "New ideas are welcomed and explored, even if they challenge the status quo.",
-                    growthIndicator: true
+                    text: "When a colleague receives recognition, it can feel like there's less available for everyone else.",
+                    growthIndicator: false
                 },
                 {
-                    text: "Experimentation is encouraged, and there's tolerance for calculated risks that don't pay off.",
-                    growthIndicator: true
+                    text: "Competition for top positions motivates people to do their best work.",
+                    growthIndicator: false
                 },
                 {
-                    text: "Success is celebrated, but so is the courage to try something new.",
-                    growthIndicator: true
+                    text: "Resources and opportunities are primarily directed toward proven high performers.",
+                    growthIndicator: false
                 }
             ]
         }
     ],
     interpretations: {
-        fixed: {
-            range: [12, 28],
-            title: "Predominantly Fixed Mindset Culture",
-            description: "Your organization shows signs of a fixed mindset culture. This often manifests as blame-focused responses to failure, limited risk-taking, and beliefs that talent is innate rather than developed. While this can create short-term stability, it typically limits innovation, employee engagement, and long-term adaptability.",
+        // Note: Questions are phrased to indicate genius culture traits
+        // Higher scores = more genius culture characteristics
+        // Lower scores = more growth culture characteristics
+        genius: {
+            range: [45, 60],
+            title: "Strong Culture of Genius Characteristics",
+            description: "Your responses suggest your organization operates with many characteristics of what researchers call a 'Culture of Genius' - where talent is seen as fixed and innate. This isn't necessarily intentional; it often develops from well-meaning practices like celebrating star performers or seeking 'the best and brightest.' However, research shows these cultures can inadvertently limit collaboration, innovation, and the development of broader talent.",
             insights: [
                 {
-                    title: "Psychological Safety Gap",
-                    text: "People may fear admitting mistakes or asking for help, leading to hidden problems and missed learning opportunities."
+                    title: "The Star Search Dynamic",
+                    text: "When organizations focus on identifying who 'has it,' people shift energy from development to performance - proving themselves rather than improving themselves."
                 },
                 {
-                    title: "Talent Bottleneck",
-                    text: "Over-reliance on 'star performers' and underinvestment in developing broader talent pools."
+                    title: "Hidden Information Costs",
+                    text: "In environments where appearing capable matters most, people may hesitate to share struggles, ask questions, or surface problems early - leading to larger issues down the road."
                 },
                 {
-                    title: "Innovation Hesitancy",
-                    text: "Risk aversion may be stifling new ideas and preventing necessary adaptation to change."
+                    title: "Untapped Potential",
+                    text: "Concentrating resources on proven performers can mean missing contributions from people whose potential hasn't yet been recognized or developed."
                 }
             ],
             actions: [
-                "Start by modeling vulnerability as a leader - share your own learning moments and mistakes openly.",
-                "Implement 'learning reviews' after projects that focus on insights gained, not blame assignment.",
-                "Revise performance conversations to include development goals and growth trajectories.",
-                "Create small, safe spaces for experimentation where failure is expected and celebrated as learning."
+                "Notice how 'talent' language shapes decisions - who gets opportunities, whose ideas get heard, and who receives investment.",
+                "Experiment with sharing your own learning edges as a leader. This signals that development is valued, not just demonstrated competence.",
+                "Examine whether performance systems inadvertently encourage competition over collaboration.",
+                "Create contexts where effort and strategy are visible and valued, not just outcomes."
             ],
             reflections: [
-                "What would change if your team felt completely safe admitting they don't know something?",
-                "Which 'failures' in the past year actually contained the seeds of important innovations?",
-                "How might your organization's definition of 'talent' be limiting who gets opportunities?"
+                "What messages does your organization send about what makes someone valuable here?",
+                "When was the last time someone in a leadership role openly discussed something they were working to improve?",
+                "How might the people who don't fit the current 'star' profile contribute if given different opportunities?"
             ]
         },
         mixed: {
             range: [29, 44],
-            title: "Mixed Mindset Culture",
-            description: "Your organization shows elements of both fixed and growth mindset cultures. This is common - most organizations have pockets of growth mindset thinking alongside more fixed patterns. The opportunity lies in identifying what's working well and extending those practices more broadly.",
+            title: "Mixed Culture Characteristics",
+            description: "Your responses indicate your organization has a blend of characteristics - some that support development and some that emphasize innate ability. This is common. Most organizations aren't purely one type or another, and the culture often varies by team, leader, or situation. The interesting question is where and when each pattern shows up.",
             insights: [
                 {
-                    title: "Inconsistent Experience",
-                    text: "Different teams or departments may have very different cultures around failure, feedback, and development."
+                    title: "Context Matters",
+                    text: "The same organization might feel very different depending on the team, the project, or the stakes. Mindset culture often fluctuates based on circumstances."
                 },
                 {
-                    title: "Stated vs. Lived Values",
-                    text: "There may be a gap between what the organization says it values and how people actually experience the culture."
+                    title: "Espoused vs. Experienced",
+                    text: "Organizations often say they value learning and development, but the lived experience - especially under pressure - may tell a different story."
                 },
                 {
-                    title: "Leadership Variation",
-                    text: "Individual managers likely have significant influence on whether their teams experience growth or fixed mindset dynamics."
+                    title: "Leader Influence",
+                    text: "Individual managers and leaders have enormous influence on the local culture their teams experience, regardless of broader organizational messaging."
                 }
             ],
             actions: [
-                "Identify the teams or leaders who embody growth mindset practices and learn from them.",
-                "Address the gap between stated values and actual behaviors in leadership development.",
-                "Create consistent rituals around feedback, learning from failure, and celebrating effort.",
-                "Audit your HR processes (hiring, performance reviews, promotions) for fixed mindset signals."
+                "Map where in your organization people feel safest to take risks and admit mistakes. What's different there?",
+                "Pay attention to what happens when things go wrong - this often reveals the deeper cultural assumptions.",
+                "Look at your systems (hiring, reviews, promotions) and ask what behaviors they actually reward.",
+                "Start conversations about these patterns - awareness itself can begin to shift culture."
             ],
             reflections: [
-                "Where in your organization do you see the strongest growth mindset culture, and what makes it different?",
-                "What systems or processes might be inadvertently rewarding fixed mindset behaviors?",
-                "How do you personally respond when someone on your team fails at something important?"
+                "In which situations does your organization lean more toward proving vs. improving?",
+                "What would need to change for people to feel more comfortable showing their learning edges?",
+                "How do you personally respond when facing a significant challenge or setback at work?"
             ]
         },
         growth: {
-            range: [45, 60],
-            title: "Predominantly Growth Mindset Culture",
-            description: "Your organization demonstrates strong growth mindset characteristics. People feel safe to take risks, learn from failure, and develop their abilities. This creates a foundation for innovation, engagement, and adaptability. The opportunity now is to deepen and sustain these practices.",
+            range: [12, 28],
+            title: "Strong Culture of Growth Characteristics",
+            description: "Your responses suggest your organization operates with many characteristics of a 'Culture of Growth' - where abilities are seen as developable and the focus is on continuous improvement. This creates conditions for collaboration, innovation, and broader participation. The opportunity is to deepen these practices and ensure they're resilient under pressure.",
             insights: [
                 {
-                    title: "Strong Foundation",
-                    text: "Your culture supports the psychological safety and development orientation that drives high performance."
+                    title: "Psychological Safety Foundation",
+                    text: "When people believe they can develop and that the organization supports that development, they're more willing to take smart risks and surface problems early."
                 },
                 {
-                    title: "Continuous Improvement",
-                    text: "Even strong growth mindset cultures can deepen - there's always room to model and reinforce these values."
+                    title: "Collaborative Advantage",
+                    text: "When success isn't zero-sum, people share information more freely and support each other's development - creating collective intelligence."
                 },
                 {
-                    title: "Cultural Resilience",
-                    text: "Growth mindset cultures can be fragile under pressure - sustaining them requires ongoing attention."
+                    title: "Broader Talent Pipeline",
+                    text: "Organizations that invest in developing people at all levels often find capabilities and contributions they wouldn't have discovered through a 'star search' approach."
                 }
             ],
             actions: [
-                "Document and share stories of learning from failure to reinforce cultural norms.",
-                "Ensure growth mindset practices survive leadership transitions by embedding them in systems.",
-                "Watch for regression during high-pressure periods and actively reinforce growth mindset responses.",
-                "Help other organizations learn from your approach - teaching deepens your own practice."
+                "Document and share the specific practices that create this culture - making the implicit explicit helps sustain it.",
+                "Watch for pressure points where old patterns might re-emerge (economic stress, leadership changes, high-stakes projects).",
+                "Consider how you're developing the next generation of leaders to maintain and extend these cultural strengths.",
+                "Share what you've learned with others - teaching often deepens understanding."
             ],
             reflections: [
-                "How do you protect your growth mindset culture when the organization is under pressure?",
-                "What would it take to make these cultural strengths even more embedded and resilient?",
-                "How are you developing the next generation of leaders to sustain this culture?"
+                "What specific practices or norms contribute most to this culture? How might they be strengthened?",
+                "What could threaten these patterns, and how would you protect them?",
+                "How do new people learn 'how things work here' - is it explicit or absorbed?"
             ]
         }
     }
@@ -375,6 +380,8 @@ async function submitEmail(event) {
 }
 
 // Calculate scores
+// Note: Higher scores indicate more "Culture of Genius" characteristics
+// Lower scores indicate more "Culture of Growth" characteristics
 function calculateScores() {
     let totalScore = 0;
 
@@ -394,10 +401,11 @@ function calculateScores() {
     });
 
     // Determine interpretation based on total score
+    // High score = Genius culture, Low score = Growth culture
     let interpretation;
-    if (totalScore <= 28) {
-        interpretation = quizData.interpretations.fixed;
-    } else if (totalScore <= 44) {
+    if (totalScore >= 45) {
+        interpretation = quizData.interpretations.genius;
+    } else if (totalScore >= 29) {
         interpretation = quizData.interpretations.mixed;
     } else {
         interpretation = quizData.interpretations.growth;
@@ -413,13 +421,15 @@ function calculateScores() {
 }
 
 // Get color based on score percentage
+// Note: Higher percentage = more genius culture traits
+// We use a neutral color scheme to avoid implying judgment
 function getScoreColor(percentage) {
     if (percentage < 47) {
-        return 'var(--fixed-color)';
+        return 'var(--nk-green)';
     } else if (percentage < 75) {
-        return 'var(--mixed-color)';
+        return 'var(--nk-yellow)';
     } else {
-        return 'var(--growth-color)';
+        return 'var(--nk-blue)';
     }
 }
 
@@ -455,7 +465,7 @@ function calculateAndShowResults() {
                 <span class="dimension-bar-score">${dim.score}/${dim.maxScore}</span>
             </div>
             <div class="dimension-bar">
-                <div class="dimension-bar-fill" data-width="${dim.percentage}" style="background: linear-gradient(90deg, var(--fixed-color), ${getScoreColor(dim.percentage)});"></div>
+                <div class="dimension-bar-fill" data-width="${dim.percentage}" style="background: ${getScoreColor(dim.percentage)};"></div>
             </div>
         </div>
     `).join('');
@@ -488,6 +498,20 @@ function calculateAndShowResults() {
     const reflectionList = document.getElementById('reflectionList');
     reflectionList.innerHTML = results.interpretation.reflections.map(q => `<li>${q}</li>`).join('');
 }
+
+// Toggle dropdown menu
+function toggleDropdown() {
+    const menu = document.getElementById('dropdownMenu');
+    menu.classList.toggle('open');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+    const dropdown = document.querySelector('.other-tests-dropdown');
+    if (dropdown && !dropdown.contains(e.target)) {
+        document.getElementById('dropdownMenu')?.classList.remove('open');
+    }
+});
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
